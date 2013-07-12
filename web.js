@@ -2,10 +2,12 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+indexBuffer = fs.readFile('index.html')
+indexString = indexBuffer.toString()
+
 app.get('/', function(request, response) {
 
-  indexBuffer = fs.readFile('index.html')
-  indexString = indexBuffer.toString()
+
   response.send(indexString)
   //response.send('Hello World2!');
 });
