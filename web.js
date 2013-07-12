@@ -2,8 +2,8 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-indexBuffer = fs.readFile('index.html')
-indexString = indexBuffer.toString()
+var indexBuffer = fs.readFile('index.html')
+var indexString = indexBuffer.toString()
 
 app.get('/', function(request, response) {
 
