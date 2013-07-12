@@ -3,10 +3,10 @@ var express = require('express');
 var app = express.createServer(express.logger());
 var fs = require('fs');
 
-var buffer = fs.readFile('index.html',function(err,data){
+fs.readFile('index.html',function(err,data){
     if (err) throw err;
 });
-var indexString = buffer.toString()
+var indexString = data.toString()
 
 app.get('/', function(request, response) {
   response.send(indexString)
