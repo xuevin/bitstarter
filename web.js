@@ -3,7 +3,7 @@ var express = require('express');
 var app = express.createServer(express.logger());
 var fs = require('fs');
 
-buffer = fs.readFile('index.html',function(err,data){
+var buffer = fs.readFile('index.html',function(err,data){
     if (err) throw err;
 });
 var indexString = buffer.toString()
