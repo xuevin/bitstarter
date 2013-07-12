@@ -1,7 +1,7 @@
 var express = require('express');
 
 var app = express.createServer(express.logger());
-fs = require('fs');
+var fs = require('fs');
 
 var indexBuffer = fs.readFile('index.html')
 var indexString = indexBuffer.toString()
