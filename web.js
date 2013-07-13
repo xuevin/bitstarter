@@ -3,15 +3,13 @@ var express = require('express');
 var app = express.createServer(express.logger());
 var fs = require('fs');
 
-fs.readFile("index.html", function(err,data) {
-    if (err) throw err;
-});
+data = fs.readFileSync("index.html");
 
 var indexString = data.toString();
 
 app.get('/', function(request, response) {
-  //response.send(indexString);
-  response.send('Hello World2!');
+  response.send(indexString);
+  //response.send('Hello World2!');
 });
 
 
