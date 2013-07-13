@@ -10,8 +10,8 @@ fs.readFile("index.html", function(err,data) {
 var indexString = data.toString();
 
 app.get('/', function(request, response) {
-  response.send(indexString);
-  //response.send('Hello World2!');
+  //response.send(indexString);
+  response.send('Hello World2!');
 });
 
 
